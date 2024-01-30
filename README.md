@@ -70,22 +70,32 @@ Make sure to execute these commands in the specified order. Adjust the paths acc
    ```bash
    npm install
    npm run dev
-   ```
-
-Ensure to run these commands in the specified order and adjust the paths according to your project structure.
-
-### Run through Docker Recommended
+   
+## Run through Docker Recommended
 
 1. **Build and Run Docker:**
-   Run the following command to build and run the project using Docker:
+   Execute the following command from your project root directory to build and run the project using Docker:
    ```bash
    docker-compose up --build -d
    ```
 
-## Test API
+2. **Import SQL Data:**
+   After Docker is running, import SQL data by running the following command:
+   ```bash
+   docker exec -i your_mysql_container_name mysql -h localhost -u username -ppassword database < app/sql/subscriber.sql
+   ```
+   Replace `your_mysql_container_name`, `username`, `password`, and `database` with your MySQL container name, username, password, and database name.
 
-- Access the following API endpoints:
-  - `/subscribers`
-  - `/subscribers/create`
+3. **Clear Redis Cache:**
+   To ensure updated results, clear Redis cache by running:
+   ```bash
+   docker exec -it your_redis_container_name redis-cli FLUSHALL
+   ```
+   Replace `your_redis_container_name` with your Redis container name.
 
-Make sure to replace placeholder values such as `localhost`, `username`, `password`, and `database` with your actual configuration. Adjust other commands and paths based on your project structure and also in Docker Config.
+4. **Test API:**
+   Access the following API endpoints:
+   - `/subscribers`
+   - `/subscribers/create`
+
+Make sure to replace placeholder values and adjust container names, usernames, passwords, and paths according to your actual configuration. Run these commands in the specified order to ensure proper setup and data import after running Docker.
