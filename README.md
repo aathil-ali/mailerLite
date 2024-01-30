@@ -62,7 +62,7 @@ This guide provides instructions on configuring and running the project. Make su
    npm run dev
    ```
 
-### Run through Docker
+### Run through Docker Recomended
 
 1. **Build and Run Docker:**
    Run the following command to build and run the project using Docker:
