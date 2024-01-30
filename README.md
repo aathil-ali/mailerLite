@@ -76,4 +76,4 @@ This guide provides instructions on configuring and running the project. Make su
   - `/subscribers`
   - `/subscribers/create`
 
-Make sure to replace placeholder values such as `localhost`, `username`, `password`, and `database` with your actual configuration. Adjust other commands and paths based on your project structure.
+Make sure to replace placeholder values such as `localhost`, `username`, `password`, and `database` with your actual configuration. Adjust other commands and paths based on your project structure and also in Docker Config.
