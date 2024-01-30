@@ -1,0 +1,10 @@
+# Dockerfile.frontend
+FROM node:latest AS frontend-builder
+
+WORKDIR /usr/src/app/frontend
+
+COPY frontend /usr/src/app/frontend
+
+RUN npm install
+
+CMD ["npm", "run", "serve"]
