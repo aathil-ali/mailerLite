@@ -21,14 +21,10 @@ This guide provides instructions on configuring and running the project. Make su
    $db_name = "database";
    ```
 
-## Start the Server
+Got it. Here's the updated section for starting the PHP server after changing the directory:
 
-1. **PHP Server:**
-   Run the PHP server using the following command:
-   ```bash
-   php -S localhost:8000
-   ```
-   Place the `web/` folder in your Apache server.
+
+Make sure to execute these commands in the specified order. Adjust the paths according to your project structure.
 
 2. **Initialize Database:**
    Run the following commands to initialize the database:
@@ -48,21 +44,37 @@ This guide provides instructions on configuring and running the project. Make su
    composer install
    ```
 
-2. **Start PHP Server:**
+
+2. **Change Directory:**
+   Navigate to the `public/` folder within your project directory:
+   ```bash
+   cd /path/to/your/project/public/
+   ```
+
+3. **Start PHP Server:**
+   Run the PHP server from the `public/` directory:
    ```bash
    php -S localhost:8000
    ```
 
 ### Run Frontend
 
-1. **Set Environment:**
-   Run the following commands to set up the environment for the frontend:
+1. **Change Directory to Frontend:**
+   Navigate to the `frontend/` folder within your project directory:
+   ```bash
+   cd /path/to/your/project/frontend/
+   ```
+
+2. **Set Environment:**
+   Configure the environment for the frontend:
    ```bash
    npm install
    npm run dev
    ```
 
-### Run through Docker Recomended
+Ensure to run these commands in the specified order and adjust the paths according to your project structure.
+
+### Run through Docker Recommended
 
 1. **Build and Run Docker:**
    Run the following command to build and run the project using Docker:
